@@ -10,5 +10,15 @@ build cloud_foundry in legancy HP Z600 workstation using BOSH
 ## Install 
 
 - First, create a workspace for our virtualbox environment.
+'''  
   mkdir -p ~/bosh-env/virtualbox
   cd ~/bosh-env/virtualbox
+'''
+- Next, we'll use bosh-deployment, the recommended installation method, to bootstrap our director.
+'''
+  git clone https://github.com/cloudfoundry/bosh-deployment.git
+'''
+- Now, we can run the virtualbox/create-env.sh script to create our test director and configure the environment with some defaults.
+'''
+  ./bosh-deployment/virtualbox/create-env.sh
+'''
