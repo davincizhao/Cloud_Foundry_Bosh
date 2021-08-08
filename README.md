@@ -78,3 +78,10 @@ Deploy cf-deployment
 ```
 bosh -e vbox -d cf deploy cf-deployment.yml  -o operations/bosh-lite.yml  -v system_domain=bosh-lite.com
 ```
+## Debug VM
+```
+bosh -e vbox -d cf ssh vms_name/label_number
+sudo su -
+monit summary
+monit restart process_name
+```
