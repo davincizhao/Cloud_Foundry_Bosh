@@ -85,3 +85,24 @@ sudo su -
 monit summary
 monit restart process_name
 ```
+
+## GET password of CF
+```
+credhub login --http-timeout=2m
+credhub find -n cf_admin_password
+credhub get -n /bosh-lite/cf/cf_admin_password
+```
+## CF Create space and org
+```
+cf create-org Z600
+cf create-space my_space -o Z600
+cf target -s my_space -o Z600
+```
+
+## Deploy stratos App
+```
+cf push console -o splatform/stratos:stable -m 128M -k 384M
+```
+
+
+
