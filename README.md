@@ -76,5 +76,5 @@ bosh upload-stemcell YOUR-STEMCELL-URL
 - Step 5: Deploy
 Deploy cf-deployment
 ```
-bosh -e vbox -d cf deploy cf-deployment/cf-deployment.yml -v cf-deployment/operation/bosh-lite.yml
+bosh -e vbox -d cf deploy cf-deployment.yml  -o operations/bosh-lite.yml  -v system_domain=bosh-lite.com
 ```
